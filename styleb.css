@@ -1,0 +1,334 @@
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+.my-icon {
+    font-size: 24px;
+  }
+  
+  .services {
+    padding: 20px;
+  }
+  
+  .services .section-header {
+    padding-bottom: 50px;
+  }
+  
+  .service-boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .service-box {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right:20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .service-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .service-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .service-box button {
+    margin-top: 10px;
+  }
+  
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  
+.container {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h5 {
+    font-size: 18px;
+    color: #333;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+  
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  ul.topnav li {
+    float: left;
+  }
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {
+    background-color: #555;
+  }
+  
+  ul.topnav li a.active {
+    background-color: #2196F3;
+  }
+  
+  ul.topnav li.right {
+    float: right;
+  }
+  
+  @media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {
+      float: none;
+    }
+  }
+  
+.resume-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: 290px;
+    height:240px;
+}
+
+.resume-section h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resume-image-section img {
+    
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.resume-image-section {
+    flex: 1;
+    text-align: right;
+    margin-top: 35px; /* Adjust this value to control the distance between the image and the navigation bar */
+    margin-bottom: 35px; /* Adjust this value as needed */
+}
+.content-section {
+    margin-top: 100px; /* Adjust this value based on the height of the preceding sections */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.slide h3 {
+    font-weight: bold;
+}
+
+.slide.active h3 {
+    font-weight: bolder;
+}
+.slide {
+    flex: 0 0 30%; /* Adjust the width of the slides as per your preference */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   display: inline-block;
+    margin: 10px; /* Add this line */
+}
+
+
+.next-page {
+    padding: 20px;
+}
+
+.next-page h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rounded-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rounded-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-section button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 100; /* Ensure the navbar is on top */
+  transition: top 0.3s ease-in-out; /* Add smooth transition effect */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-options {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-options .option {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-options .option:hover {
+  color: #f1f1f1;
+}
+
+/* Additional styling for the slides (just for example) */
+#slides {
+  height: 2000px;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+

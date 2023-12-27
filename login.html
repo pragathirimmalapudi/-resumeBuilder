@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="stylel.css">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Login</header>
+      <form action="#">
+        <input type="text" placeholder="Enter your email" id="login_email" name="login_email">
+        <input type="password" placeholder="Enter your password" id="login_password" name="login_password">
+        <a href="#">Forgot password?</a>
+<a href="C:\Users\Pragathi Chowdary\OneDrive\Desktop\26\projects\Resume builder\home.html">
+        <input type="button" class="button" value="Login" id="login"></a>
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header>Signup</header>
+      <form action="#">
+        <input type="text" placeholder="Enter your email" name ="email" id="email">
+        <input type="password" placeholder="Create a password" name="password" id="password">
+        <input type="password" placeholder="Confirm your password">
+        <input type="button" class="button" value="register" id="register">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+import {getAuth,createUserWithEmailAndPassword, signInWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDs4IHRll819AlmyDUsM9KU6IsugzfyB1Y",
+    authDomain: "resume-authentic.firebaseapp.com",
+    projectId: "resume-authentic",
+    storageBucket: "resume-authentic.appspot.com",
+    messagingSenderId: "794688770743",
+    appId: "1:794688770743:web:5a65de2afdf281e9317332",
+    measurementId: "G-HFPGPLT3ZN"
+  };
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+const auth = getAuth();
+document.getElementById("register").addEventListener("click", function() {
+		  var email =  document.getElementById("email").value;
+		  var password = document.getElementById("password").value;
+		  //For new registration
+		  createUserWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert("Registration successfully!!");
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    // ..
+		    console.log(errorMessage);
+		    alert(error);
+		  });		  		  
+	  });
+	  //----- End
+
+	  // //----- Login code start	  
+	  document.getElementById("login").addEventListener("click", function() {
+		  var email =  document.getElementById("login_email").value;
+		  var password = document.getElementById("login_password").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    //alert(user.email+" Login successfully!!!");
+//window.location.assign("mini.html");
+		    document.getElementById('logout').style.display = 'block';
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		   // alert(errorMessage);
+		  });		  		  
+	  });
+
+</script>
+</html>
